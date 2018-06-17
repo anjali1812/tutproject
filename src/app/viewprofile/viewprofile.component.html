@@ -1,0 +1,63 @@
+<div class="container">
+  <h1>Profile</h1>
+</div>
+<div class="container">
+  <div class="form-group">
+    <label>Email_id</label>
+    <input [disabled]="true" type=text class="form-control" [(ngModel)]="email_id">
+  </div>
+</div>
+
+<div class="container">
+    <div class="form-group">
+      <label>User Name</label>
+      <input [disabled]="true" type=text class="form-control" [(ngModel)]="u_name">
+    </div>
+</div>
+
+<div class="container">
+    <div class="form-group">
+      <label>Password</label>
+      <input [disabled]="true" type=password class="form-control" [(ngModel)]="password">
+    </div>
+</div>
+
+<div class="container">
+    <div class="form-group">
+      <label>Mobile No.</label>
+      <input [disabled]="true" type=text class="form-control" [(ngModel)]="mobile_no">
+    </div>
+</div>
+
+<div class="container">
+    <div class="form-group">
+      <label>City</label>
+      <select class="form-control" [(ngModel)]="city" [disabled]="true">
+        <option *ngFor="let item of cities">{{item}}</option>
+      </select>
+    </div>
+</div>
+
+<div class="container">
+    <div class="form-group">
+      <label>Gender</label><br>
+      <input type=radio value="male" [(ngModel)]="gender" [disabled]="true">Male &nbsp; &nbsp;
+      <input type=radio value="female" [(ngModel)]="gender" [disabled]="true">Female
+    </div>
+</div>
+
+<div class="container">
+    <div class="form-group">
+      <label>Address</label><br>
+      <textarea name="Address" cols="50" rows="5" [(ngModel)]="address" [disabled]="true"></textarea>
+    </div>
+</div>
+
+
+<div class="container">
+  <div class="form-group">
+  <button (click)="onEdit()" class="btn-lg" routerLink="/editprofile">Edit Profile</button>&nbsp; &nbsp;
+  <button class="btn-lg" routerLink="/">Change Password</button>
+  </div>
+</div>
+
